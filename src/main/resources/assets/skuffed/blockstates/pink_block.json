@@ -1,0 +1,59 @@
+{
+  "variants": {
+    "facing=north,filled=0": { "model":"skuffed:block/pink_block_empty" },
+    "facing=north,filled=1": { "model":"skuffed:block/pink_block_gold" },
+    "facing=north,filled=2": { "model":"skuffed:block/pink_block_money" },
+    "facing=north,filled=3": { "model":"skuffed:block/pink_block_full" },
+
+    "facing=east,filled=0": {
+      "model": "skuffed:block/pink_block_empty",
+      "y": 90
+    },
+    "facing=east,filled=1": {
+      "model": "skuffed:block/pink_block_gold",
+      "y": 90
+    },
+    "facing=east,filled=2": {
+      "model": "skuffed:block/pink_block_money",
+      "y": 90
+    },
+    "facing=east,filled=3": {
+      "model": "skuffed:block/pink_block_full",
+      "y": 90
+    },
+
+    "facing=south,filled=0": {
+      "model": "skuffed:block/pink_block_empty",
+      "y": 180
+    },
+    "facing=south,filled=1": {
+      "model": "skuffed:block/pink_block_gold",
+      "y": 180
+    },
+    "facing=south,filled=2": {
+      "model": "skuffed:block/pink_block_money",
+      "y": 180
+    },
+    "facing=south,filled=3": {
+      "model": "skuffed:block/pink_block_full",
+      "y": 180
+    },
+
+    "facing=west,filled=0": {
+      "model": "skuffed:block/pink_block_empty",
+      "y": 270
+    },
+    "facing=west,filled=1": {
+      "model": "skuffed:block/pink_block_gold",
+      "y": 270
+    },
+    "facing=west,filled=2": {
+      "model": "skuffed:block/pink_block_money",
+      "y": 270
+    },
+    "facing=west,filled=3": {
+      "model": "skuffed:block/pink_block_full",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "skuffed",
+  "version": "${version}",
+  "name": "Skuffed",
+  "description": "man idk",
+  "authors": [
+    "PerpetuallyPerplexed"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/skuffed/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.perplexed.skuffed.client.SkuffedClient"
+    ],
+    "main": [
+      "me.perplexed.skuffed.SkuffedMod"
+    ]
+  },
+  "mixins": [
+    "skuffed.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.13",
+    "fabric": "*",
+    "minecraft": "1.19-beta.1+"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "xray=false": { "model": "skuffed:block/xray_block" },
+    "xray=true": { "model": "skuffed:block/xray_block" }
+  }
+}

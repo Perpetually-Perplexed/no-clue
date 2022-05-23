@@ -1,0 +1,10 @@
+{
+  "money_disc": {
+    "sounds": [
+      {
+        "name":"skuffed:money_disc",
+        "stream": true
+      }
+    ]
+  }
+}

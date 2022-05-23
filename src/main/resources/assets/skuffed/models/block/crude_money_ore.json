@@ -1,0 +1,6 @@
+{
+  "parent": "cube/all",
+  "textures": {
+    "all": "skuffed:block/crude_money_ore"
+  }
+}
