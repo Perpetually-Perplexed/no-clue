@@ -1,6 +1,7 @@
 package me.perplexed.skuffed;
 
-import me.perplexed.skuffed.util.FeatureHolder;
+import me.perplexed.skuffed.util.holder.FeatureHolder;
+import me.perplexed.skuffed.util.holder.ItemHolder;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -21,5 +22,7 @@ public class SkuffedMod implements ModInitializer {
         Registry.register(BuiltinRegistries.PLACED_FEATURE, cmoId, FeatureHolder.CRUDE_MONEY_ORE);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
                 RegistryKey.of(Registry.PLACED_FEATURE_KEY,cmoId));
+
+        ItemHolder.load();
     }
 }

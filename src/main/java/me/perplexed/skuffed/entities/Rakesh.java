@@ -1,6 +1,6 @@
 package me.perplexed.skuffed.entities;
 
-import me.perplexed.skuffed.util.Holder;
+import me.perplexed.skuffed.util.holder.EntityTypeHolder;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -75,7 +75,7 @@ public class Rakesh extends AnimalEntity {
     @Nullable
     @Override
     public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
-        return new Rakesh(Holder.RAKESH_ENTITY_TYPE,world);
+        return new Rakesh(EntityTypeHolder.RAKESH_ENTITY_TYPE,world);
     }
 
 

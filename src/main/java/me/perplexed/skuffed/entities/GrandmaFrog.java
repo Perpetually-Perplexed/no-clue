@@ -1,6 +1,6 @@
 package me.perplexed.skuffed.entities;
 
-import me.perplexed.skuffed.util.Holder;
+import me.perplexed.skuffed.util.holder.EntityTypeHolder;
 import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -62,7 +62,7 @@ public class GrandmaFrog extends FrogEntity {
         }
 
         if (this.random.nextFloat() <= ANTHRO_CHANCE) {
-            AnthropomorphicFrog antro = Holder.ANTROPOMORPHIC_FROG_TYPE.create(this.world);
+            AnthropomorphicFrog antro = EntityTypeHolder.ANTROPOMORPHIC_FROG_TYPE.create(this.world);
             antro.setPosition(this.getX(), this.getY(), this.getZ());
             antro.setYaw(this.getYaw());
             antro.setPitch(this.getPitch());

@@ -1,6 +1,6 @@
 package me.perplexed.skuffed.entities;
 
-import me.perplexed.skuffed.util.Holder;
+import me.perplexed.skuffed.util.holder.EntityTypeHolder;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.ai.goal.*;
@@ -37,7 +37,7 @@ public class Rohit extends PassiveEntity {
     @Nullable
     @Override
     public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
-        return new Rohit(Holder.ROHIT_ENTITY_TYPE, world);
+        return new Rohit(EntityTypeHolder.ROHIT_ENTITY_TYPE, world);
     }
 
     @Override

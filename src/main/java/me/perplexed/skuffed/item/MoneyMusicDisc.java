@@ -1,6 +1,6 @@
 package me.perplexed.skuffed.item;
 
-import me.perplexed.skuffed.util.Holder;
+import me.perplexed.skuffed.util.holder.SoundHolder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.MusicDiscItem;
@@ -13,6 +13,6 @@ public class MoneyMusicDisc extends MusicDiscItem {
     }
 
     public MoneyMusicDisc(Settings settings) {
-        super(7, Holder.MONEY_MUSIC,settings);
+        super(7, SoundHolder.MONEY_MUSIC,settings);
     }
 }

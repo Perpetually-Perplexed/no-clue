@@ -1,6 +1,6 @@
 package me.perplexed.skuffed.block;
 
-import me.perplexed.skuffed.util.Holder;
+import me.perplexed.skuffed.util.holder.ItemHolder;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -54,8 +54,8 @@ public class PinkBlock extends Block {
 
         ItemStack stackToSpawn =switch (state.get(FILLED_STATE)) {
             case 1 -> new ItemStack(Items.GOLD_INGOT,1);
-            case 2 -> new ItemStack(Holder.MONEY,4);
-            case 3-> new ItemStack(Holder.MONEY_MUSIC_DISC,1);
+            case 2 -> new ItemStack(ItemHolder.MONEY,4);
+            case 3-> new ItemStack(ItemHolder.MONEY_MUSIC_DISC,1);
             default -> ItemStack.EMPTY;
         };
 
@@ -79,13 +79,13 @@ public class PinkBlock extends Block {
         if (hand != Hand.MAIN_HAND) return ActionResult.PASS;
         var stack = player.getStackInHand(hand);
 
-        if (!stack.isOf(Items.GOLD_INGOT) && !stack.isOf(Holder.MONEY) && !stack.isOf(Holder.CRUDE_MONEY)) return ActionResult.PASS;
+        if (!stack.isOf(Items.GOLD_INGOT) && !stack.isOf(ItemHolder.MONEY) && !stack.isOf(ItemHolder.CRUDE_MONEY)) return ActionResult.PASS;
 
-        if (stack.isOf(Holder.CRUDE_MONEY)) {
+        if (stack.isOf(ItemHolder.CRUDE_MONEY)) {
             int process = InputUtil.isKeyPressed(MinecraftClient.getInstance().getWindow().getHandle(),GLFW.GLFW_KEY_LEFT_SHIFT) ? stack.getCount() : 1;
             stack.decrement(process);
             world.playSound(null,pos,SoundEvents.UI_STONECUTTER_TAKE_RESULT,SoundCategory.BLOCKS,1.0F,1.0F);
-            var toInsert = new ItemStack(Holder.MONEY,process);
+            var toInsert = new ItemStack(ItemHolder.MONEY,process);
 
             if (!player.getInventory().insertStack(toInsert)) {
                 ItemEntity toSpawn = new ItemEntity(EntityType.ITEM,world);
@@ -114,7 +114,7 @@ public class PinkBlock extends Block {
             return ActionResult.CONSUME;
         }
 
-        if ((stack.isOf(Items.GOLD_INGOT) && state.get(FILLED_STATE) == 1) || (stack.isOf(Holder.MONEY) && state.get(FILLED_STATE) == 2))
+        if ((stack.isOf(Items.GOLD_INGOT) && state.get(FILLED_STATE) == 1) || (stack.isOf(ItemHolder.MONEY) && state.get(FILLED_STATE) == 2))
             return ActionResult.PASS;
         world.setBlockState(pos,state.with(FILLED_STATE,3));
         return ActionResult.CONSUME;
